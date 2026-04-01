@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Casa à venda em Juquehy | Litoral Norte SP</title>
+
+<meta name="description" content="Casa à venda em Juquehy, litoral norte de São Paulo. Imóvel com área gourmet, churrasqueira, próxima à praia.">
+<meta name="keywords" content="casa em juquehy, casa litoral norte, casa praia sp, imóvel juquehy, casa alto padrão praia">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<img src="imagens/Remax.png" class="logo">
+
+<nav>
+<a href="#sobre">Sobre</a>
+<a href="#galeria">Galeria</a>
+<a href="#localizacao">Localização</a>
+<a href="#contato">Contato</a>
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<img src="  " class="hero-img">                               <!--IMG (path)-->
+
+<div class="hero-text">
+<h1>Casa à venda em Juquehy</h1>
+<p>Casa aconchegante pé na areia</p>
+
+<a class="cta" href="#">
+Agende uma visita
+</a>
+
+</div>
+
+</section>
+
+<!-- SOBRE -->
+
+<section id="sobre" class="section">
+
+<h2>Sobre o imóvel</h2>
+
+<div class="grid">
+
+<div class="box blue">
+<p>3 dormitórios • 4 banheiros</p>
+<p>1 vaga • m²</p>                                      <!-- METROS QUADRADOS-->
+</div>
+
+<div class="box red">
+<p>Área gourmet • Churrasqueira</p>
+<p>Próximo à praia • Rua tranquila</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALERIA -->
+
+<section id="galeria" class="section">
+
+<h2>Galeria</h2>
+
+<div class="slider">
+
+<button class="prev">&#10094;</button>
+
+<div class="slides">
+
+<img src="imagens/fotofachada.jpg">
+<img src="imagens/FachadaFrentefoto14.jpeg">
+<img src="imagens/Fachadafoto15.jpeg">
+<img src="imagens/Garagemfoto12.jpeg">
+<img src="imagens/Portaofoto11.jpeg">
+
+<img src="imagens/Sofasala.jpeg">
+<img src="imagens/Mesasala.jpeg">
+<img src="imagens/salaesaida.jpeg">
+<img src="imagens/Saladuascadeiras.jpeg">
+
+<img src="imagens/Cozinha.jpeg">
+<img src="imagens/BalcaoCozinhafoto6.jpeg">
+<img src="imagens/Mesacozinha.jpeg">
+<img src="imagens/Mesacozinhalateral.jpeg">
+<img src="imagens/CozinhaMesafoto4.jpeg">
+<img src="imagens/cozinhapanorama.jpeg">
+
+<img src="imagens/QuartoCasalfoto5.jpeg">
+<img src="imagens/Quartocasalfrente.jpeg">
+<img src="imagens/Quartocasalm.jpeg">
+<img src="imagens/Quartocasalesolteirofoto3.jpeg">
+<img src="imagens/quartorepetefoto1.jpeg">
+
+<img src="imagens/AreaGourmetfoto10.jpeg">
+<img src="imagens/AreaGourmetmesafoto8.jpeg">
+<img src="imagens/Churras.jpeg">
+
+<img src="imagens/Varandafoto2.jpeg">
+<img src="imagens/varandatanque.jpeg">
+<img src="imagens/Duasredeslateral.jpeg">
+
+<img src="imagens/Lateralfoto13.jpeg">
+<img src="imagens/Laterallinda.jpeg">
+
+</div>
+
+<button class="next">&#10095;</button>
+
+</div>
+
+</section>
+
+<!-- LOCALIZAÇÃO -->
+
+<section id="localizacao" class="section">
+
+<h2>Localização</h2>
+
+<iframe src=     </iframe>           <!--LOCALIZAÇÃO-->
+
+</section>
+
+<!-- CONTATO -->
+
+<section id="contato" class="section">
+
+<h2>Contato</h2>
+
+<div class="grid center">
+
+<div class="box red contato">
+
+<h3>Agende sua visita</h3>
+
+<a class="cta" href="#">
+Falar no WhatsApp
+</a>
+
+<p><a href="#">Instagram</a></p>              <!--FIX-->
+<p><a href="#">Facebook</a></p>               <!--FIX-->
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© RE/MAX</p>
+</footer>
+
+<!-- SCRIPT SLIDER -->
+
+<script>
+
+let index = 0
+const slides = document.querySelectorAll(".slides img")
+
+function showSlide(i){
+slides.forEach((img, idx)=>{
+img.style.display = idx === i ? "block" : "none"
+})
+}
+
+function nextSlide(){
+index = (index+1)%slides.length
+showSlide(index)
+}
+
+function prevSlide(){
+index = (index-1+slides.length)%slides.length
+showSlide(index)
+}
+
+document.querySelector(".next").onclick = nextSlide
+document.querySelector(".prev").onclick = prevSlide
+
+setInterval(nextSlide,3000)
+
+showSlide(index)
+
+</script>
+
+</body>
+</html>
