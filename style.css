@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #002F6C;
+}
+
+.texto1 {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.45);
+    /* Ajustes do box */
+    padding: 8px 18px;
+    /* Espaço interno (box maior que o texto) */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    display: inline-block;
+    /* Faz o box envolver apenas a largura do texto */
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#texto2 {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.475);
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 6px;
+}
+
+.logo {
+    height: 40px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    height: 80vh;
+}
+
+.hero-img {
+    position: absolute;
+    /* A imagem fica solta ao fundo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    /* Camada de baixo */
+}
+
+.hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    overflow: hidden;
+}
+
+.hero-text {
+
+    z-index: 2;
+    /* Garante que fique acima da imagem */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    /* Espaço entre o título, o texto e o botão */
+}
+
+.cta {
+    background: #E30613;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Dica: Adicione um efeito de brilho ao passar o mouse */
+.cta:hover {
+    background: #891419;
+}
+
+.cta:hover {
+    background: #0b2c57;
+}
+
+/* SEÇÕES */
+
+.section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* GRID */
+
+.grid {
+    display: flex;
+    gap: 20px;
+}
+
+.grid.center {
+    justify-content: center;
+}
+
+/* BOX */
+
+.box {
+    flex: 1;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f5f5f5;
+}
+
+.box.blue {
+    border-top: 5px solid #002F6C;
+}
+
+.box.red {
+    border-top: 5px solid #E30613;
+}
+
+.contato {
+    text-align: center;
+}
+
+/* SLIDER */
+
+.slider {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.slides img {
+    width: 100%;
+    display: none;
+    border-radius: 5px;
+}
+
+.prev,
+.next {
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    padding: 258px 10px;
+    cursor: pointer;
+    border-radius:8px;
+
+}
+
+.prev {
+    left: -26px;
+    background: rgb(205, 8, 8);
+    color: white;
+}
+
+.next {
+    right: -26px;background: rgb(16, 11, 115);
+    color: white;
+}
+
+/* MAPA */
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #002F6C;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+    .grid {
+        flex-direction: column;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+}
