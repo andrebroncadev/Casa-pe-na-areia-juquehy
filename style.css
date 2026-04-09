@@ -153,6 +153,8 @@ nav a {
 
 .slides img {
     width: 100%;
+    height: 450px;
+    object-fit: cover;
     display: none;
     border-radius: 5px;
 }
@@ -163,7 +165,8 @@ nav a {
     top: 50%;
     transform: translateY(-50%);
     border: none;
-    padding: 258px 10px;
+    padding: 12px;
+    font-size: 18px;
     cursor: pointer;
     border-radius:8px;
 
@@ -201,7 +204,9 @@ footer {
 /* MOBILE */
 
 @media(max-width:768px) {
-
+.slides img {
+    height: 250px;
+}
     .grid {
         flex-direction: column;
     }
@@ -209,5 +214,4 @@ footer {
     .hero {
         height: 60vh;
     }
-
 }
