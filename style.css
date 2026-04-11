@@ -151,23 +151,32 @@ iframe {
 .container-botoes {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 15px;
 }
-.container-botoes a {
 
-    text-decoration: none;
+.container-botoes a {
+    display: inline-flex;       /* mantém tudo alinhado */
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;      /* REMOVE o underline */
+}
+
+.container-botoes a:link,
+.container-botoes a:visited,
+.container-botoes a:hover,
+.container-botoes a:active {
+    text-decoration: none;      /* garante que nunca apareça */
 }
 
 .container-botoes img {
     width: 50px;
-    transition: transform 0.3s ease;
-    cursor: pointer; 
     display: block;
+    transition: transform 0.25s ease;
 }
 
-.container-botoes img:hover {
-    transform: scale(1.2);
-    opacity: 0.85;
+.container-botoes a:hover img {
+    transform: scale(1.15);
 }
 
 /* FOOTER */
